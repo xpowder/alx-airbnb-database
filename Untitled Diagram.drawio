@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" version="28.1.2">
+  <diagram name="Page-1" id="QOgP27QQkh5UKU3Zi85w">
+    <mxGraphModel dx="1103" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-5" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="320" width="170" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-6" value="&lt;code data-end=&quot;270&quot; data-start=&quot;256&quot;&gt;user_id (PK)&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;284&quot; data-start=&quot;272&quot;&gt;first_name&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;297&quot; data-start=&quot;286&quot;&gt;last_name&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;306&quot; data-start=&quot;299&quot;&gt;email&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;323&quot; data-start=&quot;308&quot;&gt;password_hash&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;339&quot; data-start=&quot;325&quot;&gt;phone_number&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;347&quot; data-start=&quot;341&quot;&gt;role&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;361&quot; data-start=&quot;349&quot;&gt;created_at&lt;/code&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-5">
+          <mxGeometry y="50" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-22" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="437" as="sourcePoint" />
+            <mxPoint x="360" y="437" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-53" value="&lt;strong data-end=&quot;377&quot; data-start=&quot;365&quot;&gt;Property&lt;/strong&gt; – top-center" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="320" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-54" value="&lt;code data-end=&quot;427&quot; data-start=&quot;409&quot;&gt;property_id (PK)&lt;/code&gt;&lt;div&gt;&lt;div&gt;&lt;code data-end=&quot;450&quot; data-start=&quot;429&quot;&gt;host_id (FK → User)&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;458&quot; data-start=&quot;452&quot;&gt;name&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;473&quot; data-start=&quot;460&quot;&gt;description&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;485&quot; data-start=&quot;475&quot;&gt;location&lt;/code&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;504&quot; data-start=&quot;487&quot;&gt;price_per_night&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;518&quot; data-start=&quot;506&quot;&gt;created_at&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-53">
+          <mxGeometry y="50" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-56" value="&lt;strong data-end=&quot;1007&quot; data-start=&quot;996&quot;&gt;Message&lt;/strong&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-57" value="&lt;code data-end=&quot;1055&quot; data-start=&quot;1038&quot;&gt;message_id (PK)&lt;/code&gt;, &lt;code data-end=&quot;1080&quot; data-start=&quot;1057&quot;&gt;sender_id (FK → User)&lt;/code&gt;, &lt;code data-end=&quot;1108&quot; data-start=&quot;1082&quot;&gt;recipient_id (FK → User)&lt;/code&gt;, &lt;code data-end=&quot;1124&quot; data-start=&quot;1110&quot;&gt;message_body&lt;/code&gt;, &lt;code data-end=&quot;1135&quot; data-start=&quot;1126&quot;&gt;sent_at&lt;/code&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-56">
+          <mxGeometry y="50" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-58" value="&lt;b&gt;Booking&amp;nbsp;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="590" width="170" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-65" value="&lt;code data-end=&quot;585&quot; data-start=&quot;568&quot;&gt;booking_id (PK)&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;616&quot; data-start=&quot;587&quot;&gt;property_id&amp;nbsp;&lt;/code&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(FK→Property)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;640&quot; data-start=&quot;618&quot;&gt;guest_id (FK → User)&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;654&quot; data-start=&quot;642&quot;&gt;start_date&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;666&quot; data-start=&quot;656&quot;&gt;end_date&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;681&quot; data-start=&quot;668&quot;&gt;total_price&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;691&quot; data-start=&quot;683&quot;&gt;status&lt;/code&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-58">
+          <mxGeometry y="50" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-60" value="&lt;strong data-end=&quot;854&quot; data-start=&quot;844&quot;&gt;Review&lt;/strong&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="78" y="590" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-61" value="&lt;code data-end=&quot;903&quot; data-start=&quot;887&quot;&gt;review_id (PK)&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;934&quot; data-start=&quot;905&quot;&gt;property_id (FK → Property)&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;957&quot; data-start=&quot;936&quot;&gt;user_id (FK → User)&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;967&quot; data-start=&quot;959&quot;&gt;rating&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;978&quot; data-start=&quot;969&quot;&gt;comment&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;992&quot; data-start=&quot;980&quot;&gt;created_at&lt;/code&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-60">
+          <mxGeometry y="50" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-62" value="&lt;b&gt;Payment&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=7;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="610" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-64" value="&lt;code data-end=&quot;757&quot; data-start=&quot;740&quot;&gt;payment_id (PK)&lt;/code&gt;&lt;div&gt;&lt;code data-end=&quot;786&quot; data-start=&quot;759&quot;&gt;booking_id (FK→Booking)&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;796&quot; data-start=&quot;788&quot;&gt;amount&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;812&quot; data-start=&quot;798&quot;&gt;payment_date&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;830&quot; data-start=&quot;814&quot;&gt;payment_method&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code data-end=&quot;840&quot; data-start=&quot;832&quot;&gt;status&lt;/code&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="WPBB9UyUjFrV8AXuWgpG-62">
+          <mxGeometry y="50" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-66" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.393;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="WPBB9UyUjFrV8AXuWgpG-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="700" as="sourcePoint" />
+            <mxPoint x="350" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-69" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.409;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="440.996" as="sourcePoint" />
+            <mxPoint x="640" y="440.99" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WPBB9UyUjFrV8AXuWgpG-71" value="" style="endArrow=none;html=1;rounded=0;exitX=0.982;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="WPBB9UyUjFrV8AXuWgpG-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="700" as="sourcePoint" />
+            <mxPoint x="640" y="700" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
