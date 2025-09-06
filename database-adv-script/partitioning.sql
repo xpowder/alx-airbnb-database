@@ -1,51 +1,26 @@
+-- ===========================================================
+-- Partition Booking table by start_date (RANGE)
+-- ===========================================================
 
-CREATE TABLE users (
-    user_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    role ENUM('guest','host','admin') DEFAULT 'guest',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE properties (
-    property_id INT PRIMARY KEY,
-    host_id INT,
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    location VARCHAR(255) NOT NULL,
-    price_per_night DECIMAL(10,2) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (host_id) REFERENCES users(user_id)
-);
-
-CREATE TABLE bookings (
+-- Step 1: Create a partitioned table
+CREATE TABLE Booking_Partitioned (
     booking_id INT PRIMARY KEY,
-    property_id INT,
-    guest_id INT,
+    property_id INT NOT NULL,
+    guest_id INT NOT NULL,
     start_date DATE NOT NULL,
-    end_date DATE NOT NULL,
-    total_price DECIMAL(10,2) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (property_id) REFERENCES properties(property_id),
-    FOREIGN KEY (guest_id) REFERENCES users(user_id)
-);
+    end_date DATE,
+    status VARCHAR(20),
+    total_price DECIMAL(10,2),
+    created_at TIMESTAMP
+) PARTITION BY RANGE (start_date);
 
-CREATE TABLE reviews (
-    review_id INT PRIMARY KEY,
-    booking_id INT,
-    property_id INT,
-    rating INT CHECK (rating >= 1 AND rating <= 5),
-    comment TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (booking_id) REFERENCES bookings(booking_id),
-    FOREIGN KEY (property_id) REFERENCES properties(property_id)
-);
+-- Step 2: Create partitions per year
+CREATE TABLE bookings_2024 PARTITION OF Booking_Partitioned
+    FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 
-CREATE TABLE payments (
-    payment_id INT PRIMARY KEY,
-    booking_id INT,
-    amount DECIMAL(10,2) NOT NULL,
-    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    payment_method ENUM('credit_card','paypal','bank_transfer') NOT NULL,
-    FOREIGN KEY (booking_id) REFERENCES bookings(booking_id)
-);
+CREATE TABLE bookings_2025 PARTITION OF Booking_Partitioned
+    FOR VALUES FROM ('2025-01-01') TO ('2026-01-01');
+
+-- Step 3: Optional indexes on partitions
+CREATE INDEX idx_bookings_2024_start_date ON bookings_2024(start_date);
+CREATE INDEX idx_bookings_2025_start_date ON bookings_2025(start_date);
